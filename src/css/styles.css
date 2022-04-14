@@ -1,0 +1,112 @@
+/* header font */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;1,300;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color-primary-hex: #222831;
+    --color-primary-rgb: rgb(34, 40, 49);
+    --color-secondary-hex: #393E46;
+    --color-secondary-rgb: 57, 62, 70;
+    --color-complement-hex: #00ADB5;
+    --color-complement-rgb: 0, 173, 181;
+    --color-base-hex: #EEEEEE;
+    --color-base-rgb: rgb(238, 238, 238);
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+.hero-container {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 173, 181, .2), rgba(0, 173, 181, .4)), url(../../assets/img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titles h1,
+.titles h3 {
+    color: var(--color-base-hex);
+    text-shadow: 5px 5px 15px rgba(0,0,0,.7)
+}
+
+.titles h1 {
+    font-size: 6rem;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.titles h3 {
+    font-size: 2rem;
+    text-align: right;
+}
+
+/* fixing the underline to the input */
+.titles h3::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: 0px; 
+    left: 50%;
+    right: 0;
+    top: 0%;
+}
+
+.movie-form {
+    padding: 4rem 0;
+    /* border: 1px solid red; */
+    width: 40%;
+}
+
+.movie-form .movie-input {
+    width: 80%;
+    padding: 1rem;
+    outline: none;
+    border-radius: 1rem;
+    background: transparent;
+    border: 2px solid var(--color-complement-hex);
+    color: var(--color-base-hex);
+    position: relative;
+}
+
+.movie-input::placeholder {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
+
+
+.movie-form .btn-movie {
+    background: transparent;
+    border: 2px solid var(--color-complement-hex);
+    padding: 1rem;
+    margin-left: .4rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    color: var(--color-base-hex);
+    text-shadow: 0 5px 5px #000;
+    cursor: pointer;
+}   
+
+/* 
+@keyframes blink {
+    0% {
+
+    }
+} */
