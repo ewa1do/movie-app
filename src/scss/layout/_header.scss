@@ -1,0 +1,60 @@
+.hero-container {
+    height: 100vh;
+    background: $hero-gradient;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .titles {
+        h1 {
+            font-size: 6rem;
+            font-family: $header-font;
+        }
+
+        h3 {
+            font-size: 2rem;
+            text-align: right;
+        }
+
+        h1, h3 {
+            @include titleFormat;
+        }
+    }
+
+    .movie-form {
+        padding: 4rem 0;
+        width: 40%;
+
+        .movie-input {
+            width: 80%;
+            padding: 1rem;
+            outline: none;
+            border-radius: 1rem;
+            background: transparent;
+            border: 2px solid $color-complement-hex;
+            color: $color-base-hex;
+            position: relative;
+
+            ::placeholder {
+                font-size: 1.4rem;
+                padding-left: 2rem;
+            }
+        }
+
+        .btn-movie {
+            background: transparent;
+            border: 2px solid $color-complement-hex;
+            padding: 1rem;
+            margin-left: .4rem;
+            border-radius: 1rem;
+            text-transform: uppercase;
+            color: $color-base-hex;
+            text-shadow: 0 5px 5px #000;
+            cursor: pointer;
+        } 
+    }
+}

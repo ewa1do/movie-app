@@ -1,0 +1,19 @@
+// Color Palette Variables
+$color-primary-hex: #222831;
+$color-primary-rgb: 34, 40, 49;
+$color-secondary-hex: #393E46;
+$color-secondary-rgb: 57, 62, 70;
+$color-complement-hex: #00ADB5;
+$color-complement-rgb: 0, 173, 181;
+$color-base-hex: #EEEEEE;
+$color-base-rgb: 238, 238, 238;
+
+// Gradients
+$hero-gradient: linear-gradient(to right, rgba(0, 173, 181, .2), rgba(0, 173, 181, .4)), url(../../assets/img/hero.jpg);
+
+// Fonts 
+$header-font: 'Merriweather Sans', sans-serif;
+$base-font: 'Montserrat', sans-serif;
+
+// Shadows
+$header-shadow: 5px 5px 15px rgba(0,0,0,.7);

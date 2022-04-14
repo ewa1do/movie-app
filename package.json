@@ -1,0 +1,24 @@
+{
+  "name": "movie-app",
+  "version": "1.0.0",
+  "description": "SPA using Vanilla JS",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewa1do/movie-app.git"
+  },
+  "keywords": [],
+  "author": "Eduardo Vera - @ewa1do",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ewa1do/movie-app/issues"
+  },
+  "homepage": "https://github.com/ewa1do/movie-app#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
+    "parcel": "^2.4.1"
+  }
+}
