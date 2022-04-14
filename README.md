@@ -1,5 +1,5 @@
 # movie-app
-SPG using Vanilla JS
+SPA using Vanilla JS
 
 
 <!-- data to store:
