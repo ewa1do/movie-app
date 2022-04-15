@@ -1,0 +1,28 @@
+.section__movie {
+    height: 100vh;
+    // padding: 2rem 0;
+    display: flex;
+    // justify-content: space-evenly;
+
+
+    .movie__poster {
+        background: linear-gradient(to right, 
+        rgba(20, 63, 107, .7), rgba(20, 63, 107, .8)), $movie-source;
+        background-size: cover;
+        width: 30%;
+        position: relative;
+        // need to fix this
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+
+        img {
+            margin: 10rem 5rem;
+            box-shadow: $shadow-1;
+            border-radius: 10px;
+        }
+    }
+
+
+
+
+}
