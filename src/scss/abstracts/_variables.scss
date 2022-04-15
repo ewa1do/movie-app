@@ -8,8 +8,12 @@ $color-complement-rgb: 0, 173, 181;
 $color-base-hex: #EEEEEE;
 $color-base-rgb: 238, 238, 238;
 
+// sources
+$movie-source: url(https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg);
+
 // Gradients
 $hero-gradient: linear-gradient(to right, rgba(0, 173, 181, .2), rgba(0, 173, 181, .4)), url(../../assets/img/hero.jpg);
+$movie-gradient: linear-gradient(to right, rgba(20, 63, 107, .7), rgba(20, 63, 107, .8)), $movie-source;
 
 // Fonts 
 $header-font: 'Merriweather Sans', sans-serif;
@@ -18,6 +22,3 @@ $base-font: 'Montserrat', sans-serif;
 // Shadows
 $header-shadow: 5px 5px 15px rgba(0,0,0,.7);
 $shadow-1: 15px 15px 20px rgba(0,0,0,.7);
-
-// sources
-$movie-source: url(https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg);

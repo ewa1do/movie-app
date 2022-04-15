@@ -14,3 +14,8 @@ body {
     font-family: $base-font;
     font-size: 1.2rem;
 }
+
+ul {
+    list-style: none;
+    display: flex;
+}

@@ -1,27 +1,104 @@
 .section__movie {
     height: 100vh;
-    // padding: 2rem 0;
     display: flex;
-    // justify-content: space-evenly;
 
 
     .movie__poster {
-        background: linear-gradient(to right, 
-        rgba(20, 63, 107, .7), rgba(20, 63, 107, .8)), $movie-source;
+        background: $movie-gradient;
         background-size: cover;
         width: 30%;
         position: relative;
-        // need to fix this
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        box-shadow: 5px 0px 10px black;
 
         img {
             margin: 10rem 5rem;
             box-shadow: $shadow-1;
             border-radius: 10px;
         }
+
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            .movie__poster {
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
     }
 
+    .movie__info {
+        position: relative;
+        
+        .type {
+            margin-left: 63vw;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .movie__title {
+            position: absolute;
+            transform: translate(15%, 10%) skewY(-6deg);
+            left: 40%;
+            top: 5%;
+            
+            h2 {
+                background-image: linear-gradient(to bottom,rgba(0, 173, 181, .4), rgba(0, 173, 181, .7));
+                padding: 1.3rem 2rem;
+                box-decoration-break: clone;
+                max-width: 100%;
+                font-size: 3rem;
+                color: $color-base-hex;
+                text-shadow: 2px 2px 1px rgba(0,0,0,.7);
+                box-shadow: 10px 10px 20px rgba(0,0,0,.7);
+                border-radius: .5rem;
+            }
+        }
+    }
+
+    .movie__wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .movie__wrapper--1 {
+        margin-top: 20rem;
+
+        
+        .movie__genre {
+            ul {
+                
+                li {
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+    
+    .movie__wrapper--2 {
+        margin-top: 15rem;
+        flex-direction: column;
+        align-items: center;
+
+        .movie__actors ul {
+            // display: flex;
+
+            li {
+                padding: 0 1rem; 
+            }
+        }
+    }
+
+    .movie__wrapper--3 {
+        margin-top: 15rem;
+        flex-direction: row;
+
+        .movie__ratings {
+            ul {
+                li {
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
 
 
 
