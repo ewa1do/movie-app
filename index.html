@@ -10,17 +10,92 @@
 </head>
 <body>
     <main>
-        <div class="hero-container">
-            <div class="titles">
-                <h1>Welcome to Muviapi</h1>
-                <h3>Search for +1M of Movies and Series</h3>
+        <section class="section__header">
+            <div class="hero-container">
+                <div class="titles">
+                    <h1>Welcome to Muviapi</h1>
+                    <h3>Search for +1M of Movies and Series</h3>
+                </div>
+                
+                <form action="#" class="movie-form">
+                    <input type="text" placeholder="enter the movie name" class="movie-input">
+                    <input type="submit" value="search" class="btn-movie">
+                </form>
             </div>
-            
-            <form action="#" class="movie-form">
-                <input type="text" placeholder="enter the movie name" class="movie-input">
-                <input type="submit" value="search" class="btn-movie">
-            </form>
-        </div>
+        </section>
+
+        <section class="section__movie">
+            <div class="movie__poster">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg" alt="movie-poster">
+            </div>
+
+            <div class="movie__info">
+                <div class="type"><span>Movie</span></div>
+
+                <div class="movie__title">
+                    <h2>Iron Man</h2>
+                </div>
+
+                <div class="movie__date">
+                    <span class="movie__release--date">02 May 2008</span>
+                    <span class="movie__release--year">2008</span>
+                </div>
+
+                <div class="movie__country">
+                    <p>United States, Canada</p>
+                </div>
+
+                <div class="movie__genre">
+                    <ul>
+                        <li>Action</li>
+                        <li>Aventure</li>
+                        <li>Sci-Fi</li>
+                    </ul>
+                </div>
+
+                <div class="movie__rated">
+                    <h3>PG-13</h3>
+                </div>
+
+                <div class="movie__description">
+                    <p class="description">
+                        After being held captive in an Afghan cave, billionaire engineer Tony Stark creates
+                        a unique weaponized suit of armor to fight evil.
+                    </p>
+                </div>
+
+                <div class="movie__director">
+                    <span>Jon Favreau</span>
+                </div>
+
+                <div class="movie__actors">
+                    <ul>
+                        <li>Robert Downey Jr.</li>
+                        <li>Gwyneth Paltrow</li>
+                        <li>Terrence Howard</li>
+                    </ul>
+                </div>
+
+                <div class="movie__awards">
+                    <p>Nominated for 2 Oscars. 21 wins & 73 nominations total</p>
+                </div>
+
+                <div class="movie__ratings">
+                    <ul>
+                        <li class="movie__rating--imdb">
+                            <span>7.9/10</span>
+                        </li>
+                        <li class="movie__rating--rotten">
+                            <span>94%</span>
+                        </li>
+                        <li class="movie__rating--metracritic">
+                            <span>79/100</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
     </main>
 </body>
 </html>
