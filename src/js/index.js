@@ -1,29 +1,30 @@
-// 20ac2fd0b API KEY
-// endPoint
+// import { API_KEY } from './config';
+// import { AJAX } from './helpers';
 
-const inputMovie = document.querySelector('.movie-input');
-const btnMovie = document.querySelector('.btn-movie');
+// const inputMovie = document.querySelector('.movie-input');
+// const btnMovie = document.querySelector('.btn-movie');
 
-console.log(btnMovie);
+// let fetchRes;
 
-const getJSON = async function (url) {
-    const res = await fetch(url);
+// console.log(btnMovie);
 
-    const data = await res.json();
+// const getJSON = async function (url) {
+//     const res = await fetch(url);
 
-    return data;
-}
+//     const data = await res.json();
 
+//     return data;
+// }
 
-const movieName = function (name) {
-    const movie = name.split(' ')
-        .map(word => word.toLowerCase())
-        .join('+');
+// const movieName = function (name) {
+//     const movie = name.split(' ')
+//         .map(word => word.toLowerCase())
+//         .join('%20');
 
-    return movie;
-}
+//     return movie;
+// }
 
-// movieName('rick & morty');
+// console.log(movieName('rick & morty'));
 
 
 // const searchMovie = getJSON(`http://www.omdbapi.com/?t=${movieName('batman begins')}&apikey=20ac2fd0`)
@@ -31,18 +32,32 @@ const movieName = function (name) {
 
 
 
-btnMovie.addEventListener('click', function (e) {
-    e.preventDefault();
+// btnMovie.addEventListener('click', function (e) {
+//     e.preventDefault();
 
-    const searchMovie = getJSON(`http://www.omdbapi.com/?t=${movieName(inputMovie.value)}&apikey=20ac2fd0`)
-    .then(data => console.log(data));
+//     // getJSON(`https://imdb-api.com/API/SearchMovie/${API_KEY}/${movieName(inputMovie.value)}`)
+//     // .then(data => {
+//     //     const [firstRes] = data.results;
 
+//     //     console.log(firstRes);
 
-    inputMovie.value = '';
-});
+//     //     return firstRes;
+//     // }).then(result => {
+//     //     const data = fetch(`https://imdb-api.com/en/API/Wikipedia/${API_KEY}/${result.id}`);
 
+//     //     return data;
+//     // }).then(res => {
+//     //     const data = res.json();
 
+//     //     return data;
+//     // }).then(data => console.log(data));
 
+//     const movie = AJAX(`https://imdb-api.com/API/SearchMovie/${API_KEY}/${movieName(inputMovie.value)}`);
+    
+//     // console.log(movie);
+    
+//     inputMovie.value = '';
+// });
 
 
 
@@ -63,5 +78,4 @@ btnMovie.addEventListener('click', function (e) {
 
 
 // search.then(data => console.log(data));
-
 
