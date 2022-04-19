@@ -1,5 +1,5 @@
 .section__movie {
-    height: 100vh;
+    height: 0vh;
     display: flex;
     flex-direction: row;
 
@@ -11,10 +11,11 @@
         box-shadow: 5px 0px 10px black;
 
         img {
-            margin: 10rem 5rem;
+            margin: 6rem 3.5rem;
             box-shadow: $shadow-1;
             border-radius: 10px;
-            width: 75%
+            width: 80%;
+            height: 80%;
         }
 
         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -29,7 +30,8 @@
     .movie__info {
         position: relative;
         background: linear-gradient(to top,rgba(0, 173, 181, .4), rgba(40, 223, 153, .8), rgba(71, 0, 216, .5));
-        height: 20vh;
+        // height: 20vh;
+        height: 15vh;
         width: 70vw;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, .45);
 
@@ -69,7 +71,7 @@
     }
 
     .movie__wrapper--1 {
-        margin-top: 20rem;
+        margin-top: 15rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, .45);
         padding: .5rem 0;
         font-size: 1.4rem;
@@ -85,15 +87,23 @@
     }
     
     .movie__wrapper--2 {
-        margin-top: 6rem;
+        margin-top: 4rem;
         flex-direction: column;
         align-items: center;
         
         .movie__actors ul {
             // display: flex;
+            overflow-x: scroll;
+            width: 25%;
+            margin: 0 auto;
 
             li {
                 padding: 0 1rem; 
+
+                img {
+                    width: 13rem;
+                    height: 13rem;
+                }
             }
         }
 
@@ -103,14 +113,14 @@
             margin-left: 10%;
 
             h3 {
-                font-size: 3rem;
+                font-size: 2.5rem;
                 font-weight: 400;
                 padding: 1rem 0;
                 text-align: center;
             }
 
             p {
-                font-size: 1.8rem;
+                font-size: 1.3rem;
             }
             
         }
@@ -121,7 +131,7 @@
     }
 
     .movie__wrapper--3 {
-        margin-top: 12rem;
+        margin-top: 2rem;
         flex-direction: row;
 
         .movie__ratings {

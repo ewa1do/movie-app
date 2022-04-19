@@ -1,5 +1,5 @@
-const keys = ['k_vg18mjc4','k_5ksmk67t', 'k_imv526lx'];
-export const API_KEY = keys[2];
+const keys = ['k_vg18mjc4','k_5ksmk67t', 'k_imv526lx', 'k_sz8r5tnm', 'k_7khnvn2a'];
+export const API_KEY = keys[4];
 export const TIMEOUT_SEC = 10;
 export const LANG = 'en';
 export const SEARCH_URL = `https://imdb-api.com/API/Search`;

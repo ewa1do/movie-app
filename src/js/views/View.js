@@ -3,6 +3,7 @@ import { mark } from "regenerator-runtime";
 export default class View {
     _data;
     _header = document.querySelector('.hero-container');
+    _section = document.querySelector('.section__movie');
 
     render (data, render = true) {
         this._data = data;
@@ -27,6 +28,7 @@ export default class View {
 
 
     _animationSlide () {
+        this._section.classList.remove('hidden');
         this._header.style.height = '10vh';
         this._header.style.transition = 'all .8s ease';
         this._header.style.flexDirection = 'row';

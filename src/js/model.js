@@ -1,4 +1,4 @@
-import { API_KEY, GET_ACTORS_URL, GET_MOVIE_DATA, GET_MOVIE_URL, GET_WIKIPEDIA_URL, SEARCH_URL } from './config.js';
+import { API_KEY, GET_MOVIE_DATA, SEARCH_URL } from './config.js';
 import { AJAX, createURLString } from './helpers.js';
 
 export const state = {
@@ -37,7 +37,6 @@ export const loadSearch = async function (query) {
         state.query = query;
         const data = await AJAX(`${SEARCH_URL}/${API_KEY}/${createURLString(query)}`);
 
-        // console.log(data);
         const [results] = data.results;
 
         if (!results) throw new Error(`There are no movies named ${query}, pleasea try again with another name`);
@@ -57,12 +56,8 @@ export const getMovieData = async function (id = state.id) {
     try {
         const data = await AJAX(`${GET_MOVIE_DATA}/${API_KEY}/${id}`);
 
-        console.log(data);
-        // console.log(data.type);
-
         state.data = createMovieObject(data);
-
-        // console.log('data', state.data);
+    
 
     } catch (err) {
         throw err;

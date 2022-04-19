@@ -37,26 +37,6 @@ class MovieView extends View {
                     </div>
                 </div>
 
-                <div class="movie__wrapper movie__wrapper--2">
-                    <div class="movie__description">
-                        <h3>${this._data.tagline}</h3>
-                        <p class="description">
-                            ${this._data.plot}
-                        </p>
-                    </div>
-    
-                    <div class="movie__director">
-                        <span>Director: ${this._data.directorList.map(director => director.name)}</span>
-                    </div>
-    
-                    <div class="movie__actors">
-                        <ul>
-                            <h4>Cast:</h4>
-                            ${this._data.actorList.map(this._generateMarkupList).join('')}
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="movie__wrapper movie__wrapper--3">
                     <div class="movie__awards">
                         <p>${this._data.awards}</p>
@@ -74,14 +54,41 @@ class MovieView extends View {
                     </div>
                 </div>
 
+                <div class="movie__wrapper movie__wrapper--2">
+                    <div class="movie__description">
+                        <h3>${this._data.tagline || ''}</h3>
+                        <p class="description">
+                            ${this._data.plot}
+                        </p>
+                    </div>
+    
+                    <div class="movie__director">
+                        <span>Director: ${this._data.directorList.map(director => director.name)}</span>
+                    </div>
+    
+                    <div class="movie__actors">
+                        <ul>
+                            ${this._data.actorList.map(this._generateMarkupList).join(' ')}
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         `;
     }
 
     _generateMarkupList (actor) {
         return `
-            <li>${actor.name}</li>
-        `
+            <li>
+                <img src="${actor.image}">
+                <h4>${actor.name}</h4>
+                <span>${
+                    actor.asCharacter.split(' ')
+                    .slice((actor.asCharacter.split(' ').length / 2))
+                    .join(' ')}
+                </span>
+            </li>
+        `;
     }
 }
 export default new MovieView();
