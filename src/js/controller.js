@@ -1,23 +1,26 @@
 import * as model from './model.js'
 import View from './views/View.js';
 import movieView from './views/movieView.js';
+import searchView from './views/searchView';
 
 
 const controlMovie = async function () {
     try {
-        const query = movieView.getQuery();
+        const query = searchView.getQuery();
 
         // console.log(query);
 
         if (!query) return;
 
-        await model.loadMovie(query);
+        await model.loadSearch(query);
 
-        await model.findMovieInWikipedia(model.state.movie.id);
+        await model.getMovieData(model.state.id);
 
-        await model.getCastData(model.state.movie.id);
+        // await model.findMovieInWikipedia(model.state.movie.id);
 
-        movieView.render(model.state);
+        // await model.getCastData(model.state.movie.id);
+
+        movieView.render(model.state.data);
     } catch (err) {
         console.error(`${err} 🔥🔥!!`);
     }
@@ -42,6 +45,6 @@ const controlMovie = async function () {
 
 
 const init = function () {
-    movieView.addHandlerSearchMovie(controlMovie);
+    searchView.addHandlerSearchMovie(controlMovie);
 }
 init();

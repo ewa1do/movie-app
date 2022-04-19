@@ -1,46 +1,87 @@
 import View from './View.js';
 
-const header = document.querySelector('.hero-container');
-
-export const animationSlide = function () {
-    header.style.height = '10vh';
-    header.style.transition = 'all .8s ease';
-    header.style.flexDirection = 'row';
-    header.style.justifyContent = 'space-around';
-    document.querySelector('.titles h3').style.display = 'none';
-    document.querySelector('.titles h1').textContent = 'Muviapi';
-    document.querySelector('.titles h1').style.fontSize = '4rem';
-}
-
 class MovieView extends View {
-    _parentElement = document.querySelector('.movie-form');
-
-    getQuery () {
-            const query = this._parentElement.querySelector('.movie-input').value;
-            this._clearInput();
-            return query;
-    }
-    
-    _clearInput () {
-        this._parentElement.querySelector('.movie-input').value = '';
-    }
-
-    addHandlerSearchMovie (handler) {
-        this._parentElement.addEventListener('submit', function (e) {
-            e.preventDefault();
-            handler();
-            animationSlide();
-        })
-    }
-
+    _parentElement = document.querySelector('.section__movie');
 
     _generateMarkup () {
         return `
-            <div class="movie__poster">
-                <img src="${this._data.movie.image}" alt="movie-poster">
-            </div>  
+            <div class="movie__poster" 
+                style="
+                    background: linear-gradient(to right, rgba(0, 173, 181, .5), rgba(0, 173, 181, .65)), url(${this._data.image});
+                    background-size: cover;
+                    ">
+                <img src="${this._data.image}" alt="movie-poster">
+            </div>
+            <div class="movie__info">
+                <div class="movie__title">
+                    <h2>${this._data.title}</h2>
+                </div>
+
+                <div class="movie__wrapper movie__wrapper--1">
+                    <div class="movie__rated">
+                        <h3>${this._data.contentRating}</h3>
+                    </div>
+                    <div class="movie__date">
+                        <span class="movie__release--date">Release: ${this._data.releaseDate}</span>
+                        <span class="movie__release--year">${this._data.year}</span>    
+                    </div>
+    
+                    <div class="movie__country">
+                        <p>Country: ${this._data.countryList.map(country => country.value)}</p>
+                    </div>
+    
+                    <div class="movie__genre">
+                        <ul>
+                            ${this._data.genreList.map(genre => `<li>${genre.value}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="movie__wrapper movie__wrapper--2">
+                    <div class="movie__description">
+                        <h3>${this._data.tagline}</h3>
+                        <p class="description">
+                            ${this._data.plot}
+                        </p>
+                    </div>
+    
+                    <div class="movie__director">
+                        <span>Director: ${this._data.directorList.map(director => director.name)}</span>
+                    </div>
+    
+                    <div class="movie__actors">
+                        <ul>
+                            <h4>Cast:</h4>
+                            ${this._data.actorList.map(this._generateMarkupList).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="movie__wrapper movie__wrapper--3">
+                    <div class="movie__awards">
+                        <p>${this._data.awards}</p>
+                    </div>
+
+                    <div class="movie__ratings">
+                        <ul>
+                            <li class="movie__rating--imdb">
+                                <span>${this._data.imDbRating}</span>
+                            </li>
+                            <li class="movie__rating--metracritic">
+                                <span>${this._data.metacriticRating}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         `;
     }
-}
 
+    _generateMarkupList (actor) {
+        return `
+            <li>${actor.name}</li>
+        `
+    }
+}
 export default new MovieView();

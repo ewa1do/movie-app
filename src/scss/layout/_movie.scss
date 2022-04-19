@@ -1,6 +1,7 @@
 .section__movie {
     height: 100vh;
     display: flex;
+    flex-direction: row;
 
     .movie__poster {
         // background: $movie-gradient;
@@ -28,17 +29,17 @@
     .movie__info {
         position: relative;
         background: linear-gradient(to top,rgba(0, 173, 181, .4), rgba(40, 223, 153, .8), rgba(71, 0, 216, .5));
-        height: 25vh;
+        height: 20vh;
+        width: 70vw;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, .45);
 
         .movie__title {
             
-
-            .type {
-                    margin-left: 10vw;
-                margin-top: 1rem;
-                font-size: 1.3rem;
-            }
+            // .type {
+            //         margin-left: 10vw;
+            //     margin-top: 1rem;
+            //     font-size: 1.3rem;
+            // }
             
             h2 {
                 // background-image: linear-gradient(to bottom,rgba(0, 173, 181, .4), rgba(0, 173, 181, .7));
@@ -56,7 +57,8 @@
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%, -50%) skewY(-6deg);
+                // transform: translate(-50%, -50%) skewY(-6deg);
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -83,7 +85,7 @@
     }
     
     .movie__wrapper--2 {
-        margin-top: 10rem;
+        margin-top: 6rem;
         flex-direction: column;
         align-items: center;
         
@@ -99,6 +101,18 @@
             font-size: 1.9rem;
             width: 80%;
             margin-left: 10%;
+
+            h3 {
+                font-size: 3rem;
+                font-weight: 400;
+                padding: 1rem 0;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+            
         }
 
         .movie__director {
