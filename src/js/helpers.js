@@ -26,20 +26,3 @@ export const AJAX = async function (url) {
         throw err;
     }
 }
-
-// export const AJAX = function (url) {
-//     return fetch (url)
-//     .then(res => {
-//         data = res.json();
-//         return data;
-//     }).then(data => {
-//         const [firstResult] = data.results;
-//         return firstResult;
-//     }).then(result => {
-//         console.log(result);
-//         const wikiData = fetch(`https://imdb-api.com/en/API/Wikipedia/${API_KEY}/${result.id}`);
-
-//         return wikiData;
-//     }).then(wikiRes => wikiRes.json())
-//     .then(wiki => console.log(wiki));
-// }

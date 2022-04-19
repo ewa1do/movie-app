@@ -2,9 +2,8 @@
     height: 100vh;
     display: flex;
 
-
     .movie__poster {
-        background: $movie-gradient;
+        // background: $movie-gradient;
         background-size: cover;
         width: 30%;
         position: relative;
@@ -14,6 +13,7 @@
             margin: 10rem 5rem;
             box-shadow: $shadow-1;
             border-radius: 10px;
+            width: 75%
         }
 
         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
