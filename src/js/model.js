@@ -1,4 +1,4 @@
-import { API_KEY, GET_MOVIE_DATA, SEARCH_URL } from './config.js';
+import { API_KEY, GET_MOVIE_DATA, GET_TITLE_COUNTRY_URL, SEARCH_URL } from './config.js';
 import { AJAX, createURLString } from './helpers.js';
 
 export const state = {
@@ -62,6 +62,17 @@ export const getMovieData = async function (id = state.id) {
     } catch (err) {
         throw err;
     }
+}
+
+export const getTitleCountry = async function (country = state.data.countryList) {
+    console.log(country[0].value);
+
+    const [data] = await AJAX(`${GET_TITLE_COUNTRY_URL}/${country[0].value}`);
+
+    state.data.flag = data.flags.png;
+
+    // console.log(state.data);
+
 }
 
 

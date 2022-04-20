@@ -16,6 +16,11 @@
             border-radius: 10px;
             width: 80%;
             height: 80%;
+
+            @media only screen and (max-width: $bp-medium) {
+                height: 60%;
+                margin: 14rem 2.5rem;
+            }
         }
 
         @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -29,7 +34,7 @@
 
     .movie__info {
         position: relative;
-        background: linear-gradient(to top,rgba(0, 173, 181, .4), rgba(40, 223, 153, .8), rgba(71, 0, 216, .5));
+        background: linear-gradient(to top,rgba(0, 0, 0, .7), rgba(0, 0, 0, .6), rgba(0, 0, 0, .5));
         // height: 20vh;
         height: 15vh;
         width: 70vw;
@@ -61,6 +66,11 @@
                 top: 50%;
                 // transform: translate(-50%, -50%) skewY(-6deg);
                 transform: translate(-50%, -50%);
+
+                @media only screen and (max-width: $bp-medium) {
+                    padding: .6rem 2rem;
+                    font-size: 2.8rem;
+                }
             }
         }
     }
@@ -76,6 +86,14 @@
         padding: .5rem 0;
         font-size: 1.4rem;
         
+        .movie__country {
+
+            .movie__flag {
+                height: 1rem;
+                width: 2rem
+            }
+        }
+
         .movie__genre {
             ul {
                 

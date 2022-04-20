@@ -10,10 +10,22 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: $bp-small) {
+        justify-content: space-evenly;
+    }
+    
+
     .titles {
         h1 {
             font-size: 6rem;
             font-family: $header-font;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-left: -13rem;
+            }
+            @media only screen and (max-width: $bp-small) {
+                margin-left: 0rem;
+            }
         }
 
         h3 {

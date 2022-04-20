@@ -10,7 +10,12 @@ class MovieView extends View {
                     background: linear-gradient(to right, rgba(0, 173, 181, .5), rgba(0, 173, 181, .65)), url(${this._data.image});
                     background-size: cover;
                     ">
-                <img src="${this._data.image}" alt="movie-poster">
+                    <figure>
+                        <img src="${this._data.image} alt="movie poster">
+                    </figure>
+
+
+                
             </div>
             <div class="movie__info">
                 <div class="movie__title">
@@ -27,7 +32,9 @@ class MovieView extends View {
                     </div>
     
                     <div class="movie__country">
-                        <p>Country: ${this._data.countryList.map(country => country.value)}</p>
+                        <p>Country: 
+                            <img class="movie__flag" src="${this._data.flag}">
+                        </p>
                     </div>
     
                     <div class="movie__genre">
@@ -39,16 +46,16 @@ class MovieView extends View {
 
                 <div class="movie__wrapper movie__wrapper--3">
                     <div class="movie__awards">
-                        <p>${this._data.awards}</p>
+                        <p>🏆${this._data.awards}</p>
                     </div>
 
                     <div class="movie__ratings">
                         <ul>
                             <li class="movie__rating--imdb">
-                                <span>${this._data.imDbRating}</span>
+                                <span>IMDb: ${this._data.imDbRating}/10</span>
                             </li>
                             <li class="movie__rating--metracritic">
-                                <span>${this._data.metacriticRating}</span>
+                                <span>Metacritic: ${this._data.metacriticRating}/100</span>
                             </li>
                         </ul>
                     </div>

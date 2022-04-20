@@ -16,6 +16,8 @@ const controlMovie = async function () {
 
         await model.getMovieData(model.state.id);
 
+        await model.getTitleCountry(model.state.data.countryList);
+
         // await model.findMovieInWikipedia(model.state.movie.id);
 
         // await model.getCastData(model.state.movie.id);

@@ -1,13 +1,24 @@
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 58.5%; 
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 50.5%; 
+    }
 }
 
 body {
