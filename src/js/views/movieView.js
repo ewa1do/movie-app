@@ -13,9 +13,6 @@ class MovieView extends View {
                     <figure>
                         <img src="${this._data.image} alt="movie poster">
                     </figure>
-
-
-                
             </div>
             <div class="movie__info">
                 <div class="movie__title">
