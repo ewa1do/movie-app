@@ -10,27 +10,48 @@
     justify-content: center;
     align-items: center;
 
-    @media only screen and (max-width: $bp-small) {
-        justify-content: space-evenly;
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //     justify-content: space-evenly;
+    // }
     
+    @media only screen and (min-width: $bp-smallest) {
+        justify-content: center;
+    }
 
     .titles {
         h1 {
-            font-size: 6rem;
             font-family: $header-font;
-
-            @media only screen and (max-width: $bp-medium) {
-                margin-left: -13rem;
+            
+            @media only screen and (min-width: $bp-smallest) {
+                font-size: 3rem;
             }
-            @media only screen and (max-width: $bp-small) {
-                margin-left: 0rem;
+            
+            @media only screen and (min-width: $bp-small) {
+                font-size: 4rem;
+            }
+
+            @media only screen and (min-width: $bp-medium-small) {
+                font-size: 5rem;
+            }
+            
+            @media only screen and (min-width: $bp-medium) {
+                font-size: 6rem;
             }
         }
 
         h3 {
-            font-size: 2rem;
             text-align: right;
+
+            @media only screen and (min-width: $bp-smallest) {
+                font-size: 1.8rem;
+            }
+
+            @media only screen and (min-width: $bp-small) {
+                font-size: 2rem;
+            }
+
+
+
         }
 
         h1, h3 {
@@ -41,6 +62,12 @@
     .movie-form {
         padding: 4rem 0;
         width: 40%;
+
+        @media only screen and (min-width: $bp-smallest) {
+            display: flex;
+            width: 65%;
+            justify-content: center;
+        }
 
         .movie-input {
             width: 80%;
@@ -55,6 +82,10 @@
             ::placeholder {
                 font-size: 1.4rem;
                 padding-left: 2rem;
+            }
+
+            @media only screen and (min-width: $bp-smallest) {
+                width: 60%;
             }
         }
 

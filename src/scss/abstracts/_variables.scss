@@ -5,7 +5,7 @@ $color-secondary-hex: #393E46;
 $color-secondary-rgb: 57, 62, 70;
 $color-complement-hex: #00ADB5;
 $color-complement-rgb: 0, 173, 181;
-$color-base-hex: #EEEEEE;
+$color-base-hex: #F6F6F6;
 $color-base-rgb: 238, 238, 238;
 
 // sources
@@ -26,5 +26,7 @@ $shadow-1: 15px 15px 20px rgba(0,0,0,.7);
 // Breakpoints
 $bp-large: 78.15em; // 1250px
 $bp-medium: 61.25em; // 980px
+$bp-medium-small: 48em; //768px
 $bp-small: 37.5em; // 600px
-$bp-smallest: 31.25em; // 500px
+$bp-smaller: 31.25em; // 500px
+$bp-smallest: 25em // 400px

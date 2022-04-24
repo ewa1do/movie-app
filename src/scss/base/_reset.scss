@@ -9,21 +9,30 @@
 }
 
 html {
-    font-size: 62.5%;
     box-sizing: border-box;
-
-    @media only screen and (max-width: $bp-medium) {
-        font-size: 58.5%; 
+    
+    @media only screen and (min-width: $bp-smallest) { 
+        font-size: 46.5%;
     }
 
-    @media only screen and (max-width: $bp-small) {
-        font-size: 50.5%; 
+    @media only screen and (min-width: $bp-smallest) {
+        font-size: 50.5%;   
     }
+
+    @media only screen and (min-width: $bp-medium-small) {
+        font-size: 55.5%;
+    }
+
+    @media only screen and (min-width: $bp-medium) {
+        font-size: 62.5%;
+    }
+
 }
 
 body {
     font-family: $base-font;
     font-size: 1.2rem;
+    background-color: $color-base-hex;
 }
 
 ul {
