@@ -1,5 +1,5 @@
-const keys = ['k_vg18mjc4','k_5ksmk67t', 'k_imv526lx', 'k_sz8r5tnm', 'k_7khnvn2a', 'k_jatuc9rb'];
-export const API_KEY = keys[5];
+const keys = ['k_vg18mjc4','k_5ksmk67t', 'k_imv526lx', 'k_sz8r5tnm', 'k_7khnvn2a', 'k_jatuc9rb', 'k_781h96e6'];
+export const API_KEY = keys[6];
 export const BRAND_API_KEY = 'IPV9yFKFcO93mTn+Hmnt3wK4vvBpqokqxGgEBLGWfUk='
 export const TIMEOUT_SEC = 10;
 export const LANG = 'en';

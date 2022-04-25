@@ -1,8 +1,9 @@
 .section__movie {
-    height: 100vh;
+    height: 0vh;
     display: flex;
     background-color: $color-base-hex;
-    overflow-x: hidden;
+    overflow: hidden;
+
 
     @media only screen and (min-width: $bp-smallest) {
         flex-direction: column;

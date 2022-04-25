@@ -31,31 +31,31 @@ const controlMovie = async function () {
 const init = function () {
     searchView.addHandlerSearchMovie(controlMovie);
 }
-// init();
+init();
 
 
 
 const header = document.querySelector('.hero-container');
 const movieForm = document.querySelector('.movie-form');
 
-const animationSlide = function ()  {
-    header.style.height = '10vh';
-    header.style.transition = 'all .8s ease';
-    header.style.flexDirection = 'row';
-    header.style.justifyContent = 'space-around';
-    document.querySelector('.titles h3').style.display = 'none';
-    document.querySelector('.titles h1').textContent = 'Muviapi';
-    document.querySelector('.titles h1').style.fontSize = '4rem';
-}
+// const animationSlide = function ()  {
+//     header.style.height = '10vh';
+//     header.style.transition = 'all .8s ease';
+//     header.style.flexDirection = 'row';
+//     header.style.justifyContent = 'space-around';
+//     document.querySelector('.titles h3').style.display = 'none';
+//     document.querySelector('.titles h1').textContent = 'Muviapi';
+//     document.querySelector('.titles h1').style.fontSize = '4rem';
+// }
 
 
-movieForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+// movieForm.addEventListener('submit', function (e) {
+//     e.preventDefault();
 
-    console.log('hola');
+//     console.log('hola');
 
-    animationSlide(header);
-    // header.classList.remove('hero-container');
-    // header.classList.add('animation-shrink-header');
-});
+//     animationSlide(header);
+//     // header.classList.remove('hero-container');
+//     // header.classList.add('animation-shrink-header');
+// });
 
