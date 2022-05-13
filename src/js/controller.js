@@ -1,42 +1,39 @@
-import * as model from './model.js'
-import View from './views/View.js';
-import movieView from './views/movieView.js';
-import searchView from './views/searchView';
-
+import * as model from "./model.js";
+import View from "./views/View.js";
+import movieView from "./views/movieView.js";
+import searchView from "./views/searchView";
 
 const controlMovie = async function () {
-    try {
-        const query = searchView.getQuery();
+  try {
+    const query = searchView.getQuery();
 
-        // console.log(query);
+    // console.log(query);
 
-        if (!query) return;
+    if (!query) return;
 
-        await model.loadSearch(query);
+    await model.loadSearch(query);
 
-        await model.getMovieData(model.state.id);
+    await model.getMovieData(model.state.id);
 
-        await model.getTitleCountry(model.state.data.countryList);
+    await model.getTitleCountry(model.state.data.countryList);
 
-        // await model.findMovieInWikipedia(model.state.movie.id);
+    // await model.findMovieInWikipedia(model.state.movie.id);
 
-        // await model.getCastData(model.state.movie.id);
+    // await model.getCastData(model.state.movie.id);
 
-        movieView.render(model.state.data);
-    } catch (err) {
-        console.error(`${err} 🔥🔥!!`);
-    }
-}
+    movieView.render(model.state.data);
+  } catch (err) {
+    console.error(`${err} 🔥🔥!!`);
+  }
+};
 
 const init = function () {
-    searchView.addHandlerSearchMovie(controlMovie);
-}
+  searchView.addHandlerSearchMovie(controlMovie);
+};
 init();
 
-
-
-const header = document.querySelector('.hero-container');
-const movieForm = document.querySelector('.movie-form');
+const header = document.querySelector(".hero-container");
+const movieForm = document.querySelector(".movie-form");
 
 // const animationSlide = function ()  {
 //     header.style.height = '10vh';
@@ -48,7 +45,6 @@ const movieForm = document.querySelector('.movie-form');
 //     document.querySelector('.titles h1').style.fontSize = '4rem';
 // }
 
-
 // movieForm.addEventListener('submit', function (e) {
 //     e.preventDefault();
 
@@ -58,4 +54,3 @@ const movieForm = document.querySelector('.movie-form');
 //     // header.classList.remove('hero-container');
 //     // header.classList.add('animation-shrink-header');
 // });
-
