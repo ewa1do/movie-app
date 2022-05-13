@@ -26,4 +26,4 @@
 - Enter the project directory on your console
 - Type `npm install` to install the dependencies
 - Type `npm start` to run the project on your computer
-- In your browser go to 127.0.0.1:1234 which is the default port for parcel applications
+- In your browser go to _127.0.0.1:1234_ which is the default port for parcel applications
