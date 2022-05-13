@@ -2,7 +2,7 @@
 
 ### MuviApi is an app which uses the IMDB API to brings you information about your favorite movie.
 
-[!muviapi home screen](https://github.com/ewa1do/movie-app/blob/main/assets/img/screen0.png)
+![muviapi home screen](https://github.com/ewa1do/movie-app/blob/main/assets/img/screen0.png)
 
 <!-- data to store:
     actors *
