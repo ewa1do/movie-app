@@ -4,20 +4,8 @@
 
 ![muviapi home screen](https://github.com/ewa1do/movie-app/blob/main/assets/img/screen0.png)
 
-<!-- data to store:
-    actors *
-    awards *
-    if (type = movie) show director; else show writter *
-    country *
-    boxoffice
-    genre *
-    plot(description) *
-    title *
-    type *
-    year *
-    imdbRating *
-    Released *
+### How to Use?
 
+**Type in the input field the movie name, hit Enter and let muviapi do the rest**
 
-    https://www.colorhunt.co/palette/222831393e4600adb5eeeeee -> color palette
--->
+![muviapi movie searched](https://github.com/ewa1do/movie-app/blob/main/assets/img/screen.png)
